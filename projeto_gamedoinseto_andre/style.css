@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    color:azure;
+    font-family: Press Start 2P, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+ a {
+    color :azure;
+ }
+
+ h1 {
+    line-height:  1.4;
+ }
+
+ .btn {
+    border: 0;
+    background-color: azure;
+    color:aqua;
+    padding: 15px 20px;
+    font-family: inherit;
+    cursor: pointer;
+ }
+
+ .btn:hover {
+   opacity: 0.9;
+}
+
+.btn:focus {
+   outline:  0;
+}
+
+.screen {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   width: 100vw;
+   transition: margin 0.5s ease-out;
+}
+
+.screen.up {
+   margin-top: -100vh;
+}
+
+.screen-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   list-style-type: none;
+   padding: 0;
+}
+
+.insects-list li {
+   margin: 10px;
+}
+
+.choose-insect-btn {
+   background-color: transparent;
+   border: 2px solid aqua;
+   color: aqua;
+   cursor: pointer;
+   font-family: inherit;
+   width: 150px;
+   height: 150px;
+}
+
+
+
+
+
+
+
+
+
+ 
