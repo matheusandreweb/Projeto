@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+     <link rel="stylesheet" href="./assets/css/style-insect.css">
+     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Captura de Insetos</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Captura de Insetos  </h1>
+      <button class="btn" id="start-btn"> Começar o Jogo</button>
+    </div>
+
+    <div class="screen">
+      <h1>Qual seu inseto favorito?</h1>
+      <ul class="insects-list">
+        <li>
+          <button class="choose-insect-btn">
+            <p>Mosca</p>
+                <img src="./assets/fly.png" alt ="fly"/>
+        </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>Mosquito</p>
+            <img
+              src="./assets/mosquito.png" 
+        alt="mosquito"
+        />
+    </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>Aranha</p>
+            <img
+                   src="./assets/spider.png" 
+        alt="spider"
+        />
+    </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>Barata</p>
+            <img
+               src="./assets/barata.png"
+         alt="roach"
+         />
+    </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+      <h3 id="time" class="time">Tempo: 00:00</h3>
+      <h3 id="score" class="score">Pontuação: 0</h3>
+      <h5 id="message" class="message">
+        Você já ficou irritado? <br>
+        Você esta jogando um jogo impossivel!!
+      </h5>
+    </div>
+
+    <script src="./assets/js/script-insect.js"></script>
+  </body>
+</html>
