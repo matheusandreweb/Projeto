@@ -1,150 +1,175 @@
+/* Importa a fonte 'Press Start 2P' do Google Fonts para um estilo retrô */
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+/* Estilo global para todos os elementos, garantindo que o padding e a borda sejam incluídos na largura/altura total */
 * {
   box-sizing: border-box;
 }
 
+/* Estilos para o corpo da página */
 body {
-  background-color: #516dff;
-  color: #fff;
-  font-family: 'Press Start 2P', sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  text-align: center;
+  background-color: #516dff; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+  font-family: 'Press Start 2P', sans-serif; /* Aplica a fonte importada */
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  overflow: hidden; /* Esconde qualquer conteúdo que transborde */
+  margin: 0; /* Remove margens padrão do corpo */
+  text-align: center; /* Centraliza o texto */
 }
 
+/* Estilos para links */
 a {
-  color: #fff;
+  color: #fff; /* Cor do link branco */
 }
 
+/* Estilos para títulos h1 */
 h1 {
-  line-height: 1.4;
+  line-height: 1.4; /* Espaçamento entre linhas */
 }
 
+/* Estilos para botões gerais */
 .btn {
-  border: 0;
-  background-color: #fff;
-  color: #516dff;
-  padding: 15px 20px;
-  font-family: inherit;
-  cursor: pointer;
+  border: 0; /* Remove a borda */
+  background-color: #fff; /* Cor de fundo branca */
+  color: #516dff; /* Cor do texto azul */
+  padding: 15px 20px; /* Espaçamento interno */
+  font-family: inherit; /* Herda a família da fonte do pai */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
+/* Efeito ao passar o mouse sobre os botões */
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.9; /* Diminui a opacidade para um efeito sutil */
 }
 
+/* Remove o contorno padrão de foco do navegador */
 .btn:focus {
   outline: 0;
 }
 
+/* Estilos para as "telas" do jogo (início, seleção, jogo) */
 .screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  transition: margin 0.5s ease-out;
+  display: flex; /* Usa flexbox para alinhamento */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  width: 100vw; /* Ocupa 100% da largura da viewport */
+  transition: margin 0.5s ease-out; /* Transição suave para a propriedade margin */
 }
 
+/* Classe adicionada para mover a tela para cima, revelando a próxima */
 .screen.up {
-  margin-top: -100vh;
+  margin-top: -100vh; /* Move a tela para fora da viewport */
 }
 
+/* Estilos para a lista de seleção de insetos */
 .insects-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o padding padrão da lista */
 }
 
+/* Margem entre os itens da lista de insetos */
 .insects-list li {
   margin: 10px;
 }
 
+/* Estilos para os botões de escolha de inseto */
 .choose-insect-btn {
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  cursor: pointer;
-  font-family: inherit;
-  width: 150px;
-  height: 150px;
+  background-color: transparent; /* Fundo transparente */
+  border: 2px solid #fff; /* Borda branca */
+  color: #fff; /* Cor do texto branca */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  font-family: inherit; /* Herda a família da fonte */
+  width: 150px; /* Largura fixa */
+  height: 150px; /* Altura fixa */
 }
 
+/* Efeito ao passar o mouse sobre os botões de escolha de inseto */
 .choose-insect-btn:hover {
-  background-color: #fff;
-  color: #516dff;
+  background-color: #fff; /* Fundo branco */
+  color: #516dff; /* Cor do texto azul */
 }
 
+/* Efeito ao clicar (estado ativo) nos botões de escolha de inseto */
 .choose-insect-btn:active {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
 }
 
+/* Estilos para as imagens dentro dos botões de escolha de inseto */
 .choose-insect-btn img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+  width: 100px; /* Largura da imagem */
+  height: 100px; /* Altura da imagem */
+  object-fit: contain; /* Garante que a imagem se encaixe sem ser cortada */
 }
 
+/* Contêiner do jogo onde os insetos aparecerão */
 .game-container {
-  position: relative;
+  position: relative; /* Define o contexto de posicionamento para elementos filhos absolutos */
 }
 
+/* Posição comum para o tempo e a pontuação */
 .time,
 .score {
-  position: absolute;
-  top: 20px;
+  position: absolute; /* Posicionamento absoluto em relação ao game-container */
+  top: 20px; /* 20px do topo */
 }
 
+/* Posição específica para o contador de tempo */
 .time {
-  left: 20px;
+  left: 20px; /* 20px da esquerda */
 }
 
+/* Posição específica para o contador de pontuação */
 .score {
-  right: 20px;
+  right: 20px; /* 20px da direita */
 }
 
+/* Estilos para a mensagem que aparece no jogo (ex: "Jogo Impossível") */
 .message {
-  line-height: 1.7;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  padding: 20px;
-  z-index: 100;
-  text-align: center;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -150%);
-  transition: transform 0.4s ease-in;
+  line-height: 1.7; /* Espaçamento entre linhas */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+  width: 100%; /* Ocupa toda a largura */
+  padding: 20px; /* Espaçamento interno */
+  z-index: 100; /* Garante que fique acima de outros elementos */
+  text-align: center; /* Centraliza o texto */
+  opacity: 0; /* Inicialmente invisível */
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Alinhado ao topo */
+  left: 50%; /* Alinhado ao centro horizontalmente */
+  transform: translate(-50%, -150%); /* Move para fora da tela (para cima) */
+  transition: transform 0.4s ease-in; /* Transição suave para a propriedade transform */
 }
 
+/* Classe adicionada para tornar a mensagem visível */
 .message.visible {
-  transform: translate(-50%, 150%);
-  opacity: 1;
+  transform: translate(-50%, 150%); /* Move para a posição visível (para baixo) */
+  opacity: 1; /* Torna totalmente visível */
 }
 
+/* Estilos para os insetos que aparecem no jogo */
 .insect {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.3s ease-in-out;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  display: flex; /* Usa flexbox para centralizar a imagem do inseto */
+  align-items: center; /* Centraliza verticalmente a imagem */
+  justify-content: center; /* Centraliza horizontalmente a imagem */
+  width: 100px; /* Largura do contêiner do inseto */
+  height: 100px; /* Altura do contêiner do inseto */
+  position: absolute; /* Posicionamento absoluto no game-container */
+  transform: translate(-50%, -50%) scale(1); /* Centraliza o inseto e escala para 100% */
+  transition: transform 0.3s ease-in-out; /* Transição suave para a transformação */
 }
 
+/* Estilo para insetos "pegos" (clicados) */
 .insect.caught {
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0); /* Reduz o inseto a zero, fazendo-o desaparecer */
 }
 
+/* Estilos para a imagem do inseto dentro do contêiner */
 .insect img {
-  width: 100px;
-  height: 100px;
+  width: 100px; /* Largura da imagem */
+  height: 100px; /* Altura da imagem */
 }

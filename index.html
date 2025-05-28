@@ -6,20 +6,22 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
      <link rel="stylesheet" href="./assets/css/style-insect.css">
      <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <title>Catch The Insect</title>
+    <title>Captura de Insetos</title>
   </head>
   <body>
+    <!--Tem função de ser a tela de inicio, conten o nome do jogo e o butão de começar jogar.  -->
     <div class="screen">
-      <h1>Catch The Insect</h1>
-      <button class="btn" id="start-btn">Play Game</button>
+      <h1>Captura de Insetos  </h1>
+      <button class="btn" id="start-btn"> Começar o Jogo</button>
     </div>
-
+<!-- É a tela que mostra a lista de adversarios  para o jogador escolher   -->
     <div class="screen">
-      <h1>What is your "favorite" insect?</h1>
+      <h1>Qual seu inseto favorito?</h1>
       <ul class="insects-list">
         <li>
+          <!--E  éssas são as opções de inimgos para escolher -->
           <button class="choose-insect-btn">
-            <p>Fly</p>
+            <p>Mosca</p>
                 <img src="./assets/fly.png" alt ="fly"/>
         </button>
         </li>
@@ -34,7 +36,7 @@
         </li>
         <li>
           <button class="choose-insect-btn">
-            <p>Spider</p>
+            <p>Aranha</p>
             <img
                    src="./assets/spider.png" 
         alt="spider"
@@ -43,7 +45,7 @@
         </li>
         <li>
           <button class="choose-insect-btn">
-            <p>Roach</p>
+            <p>Barata</p>
             <img
                src="./assets/barata.png"
          alt="roach"
@@ -52,13 +54,13 @@
         </li>
       </ul>
     </div>
-
+<!--  E  então temos os contadores, eles marcam o tempo e a pontuação do jogador-->
     <div class="screen game-container" id="game-container">
-      <h3 id="time" class="time">Time: 00:00</h3>
-      <h3 id="score" class="score">Score: 0</h3>
+      <h3 id="time" class="time">Tempo: 00:00</h3>
+      <h3 id="score" class="score">Pontuação: 0</h3>
       <h5 id="message" class="message">
-        Are you annoyed yet? <br>
-        You are playing an impossible game!!
+        Você já ficou irritado? <br>
+        Você esta jogando um jogo impossivel!!
       </h5>
     </div>
 
